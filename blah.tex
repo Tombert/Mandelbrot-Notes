@@ -1,0 +1,61 @@
+% hello.tex - Our first LaTeX example!
+
+\documentclass{article}
+
+\author{Thomas Gebert}
+\title{Thoughts on Mandelbrots}
+\date{February 7, 2016}
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\pagebreak
+
+\begin{abstract}
+  We live in a world of number, both real and imaginary. This simple and seemingly benign truth can lead to peculiar and interesting properties, and nothing demonstrates this much more clearly than a Mandelbrot set.  While the numbers that fall into the range are hardly ``unpredictable'' in any kind of literal sense, that can certainly be described as \textit{unexpected} from the (admittedly flawed) human perception.  These are my thoughts on how Mandelbrots work, and perhaps some ideas on how there might be legitimate use for them. 
+\end{abstract}
+
+\section{Iterative Function}
+The mathematics for what works in a Mandelbrot series is actually boils down to one equation:
+\begin{equation}
+  f_{n + 1}\left(x\right) = x^2 + c
+\end{equation}
+One may accurately infer that this is just a standard quadratic formula that was learned in seventh grade, and that wouldn't be too far off, but the key difference comes down to the $ f_{n + 1} $ in the front.
+
+This notation is known as ``iterated function'' syntax, and works as a sort of ``infinite self-composition''.  An example of an iterated function would be something like this.
+
+$$ f\left(x\right) = x^2$$
+$$ f\left(2\right) = 4$$
+$$ f\left(4\right) = 16$$
+$$ f\left(16\right) = 256$$
+$$ \ldots $$
+
+Squaring a larger number generally makes it larger, but perhaps more interesting are the numbers that don't go to infinity. For example, in the first supplied equation, if we we substitute the value -2, and start the iteration at 0, an interesting thing happens:
+
+$$ f\left(0\right) = 0^2 - 2 = -2$$
+$$ f\left(-2\right) = \left(-2\right)^2 - 2 = 2$$
+$$ f\left(2\right) = \left(2\right)^2 - 2 = 2$$
+$$ f\left(2\right) = \left(2\right)^2 - 2 = 2$$
+$$ \ldots $$
+
+$-2$ is a bizarre number.  As you can clearly see, no matter how many times we iterate, it always returns back $2$.
+
+This is the crux of what the Mandelbrot says: There are numbers that don't go to infinity after iteration in the iterated function of $f(x) = x^2 + c$
+
+\section{What is $c$?}
+It's impossible to not wonder what $c$ actually is in this iteration, and that is simple: it's the complex part of iterated function.
+
+Most people have taken any kind of advanced math class knows this definition:
+
+$$ i^2 = -1$$
+
+$i$ is simply name for the imaginary number, and it's an important thing to realize: there exists a separate bit of numbers that survive on a layer ``on top of'' the number line, and those are the imaginary numbers.
+
+So then, what is a complex number?  It simply is a number that has both a real and imaginary part:
+$$ 1 + 3i$$
+
+
+
+
+\end{document}
