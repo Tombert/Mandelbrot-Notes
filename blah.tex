@@ -1,7 +1,7 @@
 % hello.tex - Our first LaTeX example!
 
 \documentclass{article}
-
+\usepackage{pgfplots}
 \author{Thomas Gebert}
 \title{Thoughts on Mandelbrots}
 \date{February 7, 2016}
@@ -56,6 +56,28 @@ So then, what is a complex number?  It simply is a number that has both a real a
 $$ 1 + 3i$$
 
 
+\subsection{Projecting Our numbers}
+Projecting a number on the number line is easy:
 
+\begin{tikzpicture}
+  \begin{axis}[
+      axis y line=none,
+      axis lines=left,
+      axis line style={<->},
+      xmin=-2.5,
+      xmax=2.5,
+      width=12cm,
+      height=3cm,
+      ymin=0,
+      ymax=1,
+      xlabel= Numbers,
+      scatter/classes={o={mark=*}},
+      restrict y to domain=0:1,
+      xtick={-2,-1,...,1,2}
+    ]
+    \addplot coordinates {(1,0)};
+
+  \end{axis}
+  \end{tikzpicture}
 
 \end{document}
