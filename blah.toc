@@ -1,3 +1,0 @@
-\contentsline {section}{\numberline {1}Iterative Function}{2}
-\contentsline {section}{\numberline {2}What is $c$?}{3}
-\contentsline {subsection}{\numberline {2.1}Projecting Our numbers}{3}
