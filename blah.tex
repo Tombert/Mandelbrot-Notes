@@ -67,7 +67,7 @@ Projecting a number on the number line is easy:
       xmin=-2.5,
       xmax=2.5,
       width=12cm,
-      height=3cm,
+      height=2.5cm,
       ymin=0,
       ymax=1,
       xlabel= Numbers,
@@ -78,6 +78,36 @@ Projecting a number on the number line is easy:
     \addplot coordinates {(1,0)};
 
   \end{axis}
-  \end{tikzpicture}
+\end{tikzpicture}
+
+
+This is easy enough to conceptualize, but where do complex numbers fit in?
+
+In sort of a by-product of not having an accurate way to display an imaginary number on a one-dimensional grid, we traditionally plot imaginary numbers on the $y$ axis. For example, here is a chart for the complex number $1 + i$:
+
+
+\begin{tikzpicture}
+  \begin{axis}[
+      axis lines=center,
+      axis line style={<->},
+      xmin=-2.5,
+      xmax=2.5,
+      width=8cm,
+      height=8cm,
+      ymin=-2,
+      ymax=2,
+      xlabel= Real,
+      ylabel = Imaginary,
+      scatter/classes={o={mark=*}},
+      xtick={-2,-1,...,1,2}
+    ]
+    \addplot coordinates {(1,1)};
+
+  \end{axis}
+\end{tikzpicture}
+
+
+
+
 
 \end{document}
